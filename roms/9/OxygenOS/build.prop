@@ -79,6 +79,8 @@ ro.build.characteristics=nosdcard
 ro.bluetooth.emb_wp_mode=false
 ro.bluetooth.wipower=false
 ro.bluetooth.library_name=libbluetooth_qti.so
+persist.vendor.btstack.enable.splita2dp=false
+persist.vendor.btstack.a2dp_offload_cap=false
 #
 # ADDITIONAL_BUILD_PROPERTIES
 #

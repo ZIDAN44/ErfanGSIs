@@ -21,6 +21,11 @@ cp -fpr $thispath/../../../tmp/manifest.xml $1/etc/vintf/manifest.xml
 # build.prop
 #cp -fpr $thispath/build.prop $1/
 echo "ro.bluetooth.library_name=libbluetooth_qti.so" >> $1/build.prop
+echo "ro.build.display.id=ONEPLUS A6000_56_190118" >> $1/build.prop
+echo "ro.product.model=ONEPLUS A6000" >> $1/build.prop
+echo "ro.product.name=OnePlus6" >> $1/build.prop
+echo "ro.product.brand=OnePlus" >> $1/build.prop
+
 # Dalivk
 echo "ro.sys.fw.dex2oat_thread_count=4" >> $1/build.prop
 echo "dalvik.vm.boot-dex2oat-threads=8" >> $1/build.prop

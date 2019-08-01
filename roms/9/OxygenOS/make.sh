@@ -21,6 +21,19 @@ cp -fpr $thispath/../../../tmp/manifest.xml $1/etc/vintf/manifest.xml
 # build.prop
 #cp -fpr $thispath/build.prop $1/
 echo "ro.bluetooth.library_name=libbluetooth_qti.so" >> $1/build.prop
+# Dalivk
+echo "ro.sys.fw.dex2oat_thread_count=4" >> $1/build.prop
+echo "dalvik.vm.boot-dex2oat-threads=8" >> $1/build.prop
+echo "dalvik.vm.dex2oat-threads=4" >> $1/build.prop
+echo "dalvik.vm.image-dex2oat-threads=4" >> $1/build.prop
+echo "dalvik.vm.dex2oat-filter=speed" >> $1/build.prop
+echo "dalvik.vm.image-dex2oat-filter=speed" >> $1/build.prop
+echo "dalvik.vm.heapgrowthlimit=256m" >> $1/build.prop
+echo "dalvik.vm.heapstartsize=8m" >> $1/build.prop
+echo "dalvik.vm.heapsize=512m" >> $1/build.prop
+echo "dalvik.vm.heaptargetutilization=0.75" >> $1/build.prop
+echo "dalvik.vm.heapminfree=512k" >> $1/build.prop
+echo "dalvik.vm.heapmaxfree=8m" >> $1/build.prop
 # Append file_context
 cat $thispath/file_contexts >> $1/etc/selinux/plat_file_contexts
 sed -i "s/persist.sys.usb.config=none/persist.sys.usb.config=adb/g" $1/etc/prop.default
